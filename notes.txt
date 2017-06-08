@@ -1,0 +1,20 @@
+endpoints:
+- GET /point/?pointId/menu => menu
+- POST /point/?pointId/msg[body = "please come"/"submit order"/....]
+
+domain:
+cafe[id, name]
+    1:1 menu
+    1:n point
+    1:n waiter
+
+point[id]
+    1:n route
+
+waiter[id, name]
+    1:n route
+
+
+
+
+

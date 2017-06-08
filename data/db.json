@@ -1,0 +1,12 @@
+{
+    "cafes": [{
+        "id": 1,
+        "name": "Test Cafe 33",
+        "menu": [],
+        "points": [{
+            "id": 11
+        }, {
+            "id": 12
+        }]
+    }]
+}
