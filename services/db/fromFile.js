@@ -16,7 +16,9 @@ function readJson(file){
 var json = readJson('db.json');
 
 var cafesFromFile = function() {
-    return new Promise((resolve, reject) => resolve(json.cafes))
+    return new Promise(function(resolve, reject) {
+        return resolve(json.cafes)
+     })
 }
 
 module.exports = cafesFromFile

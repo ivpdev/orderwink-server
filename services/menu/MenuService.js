@@ -3,18 +3,21 @@ let Promise = require('bluebird')
 let _ = require('lodash')
 
 let MenuService = {
-    getMenuForPointId: function(pointId) {
+    getCafeP: function(pointId) {
         var cafesP = fromFile();
 
-        return Promise.map(cafesP,
-                    (cafes) =>
-                        _.filter(cafes,
-                            (cafe) => _.find(cafe.points,
-                                (point) => point.id === pointId )))
+        var cafeP = Promise.filter(cafesP,
+                    function(cafe) {
+                        return _.find(cafe.points, (point) => point.id == pointId) });
+
+        return cafeP;
+
     },
 
-    sendMsg: function(pointId, msg) {
+    getMenuForPointId: function(pointId) {
+        var cafeP = this.getCafeP(pointId);
 
+        return Promise.map(cafeP, (cafe) => cafe.menu ).then(_).call("flatten").call("value");
     }
 }
 

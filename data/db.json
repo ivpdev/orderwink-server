@@ -2,11 +2,38 @@
     "cafes": [{
         "id": 1,
         "name": "Test Cafe 33",
-        "menu": [],
+        "menu": [{
+            "category": "drinks",
+            "items": [{
+                "name": "Cola",
+                "price": 2.5
+            }, {
+                "name": "Beer",
+                "price": 30
+            }]
+        }],
         "points": [{
             "id": 11
         }, {
             "id": 12
+        }]
+    }, {
+        "id": 2,
+        "name": "Mr. Kebap",
+        "menu": [{
+            "category": "food",
+            "items": [{
+                "name": "Doner",
+                "price": 3
+            }, {
+                "name": "Durum",
+                "price": 4
+            }]
+        }],
+        "points": [{
+            "id": 21
+        }, {
+            "id": 22
         }]
     }]
 }
