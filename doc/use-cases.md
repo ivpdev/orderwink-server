@@ -1,4 +1,5 @@
 - browse menu
+- choose language
 - find dishes: low calories
 - find dishes: drinks
 - find dishes: food
