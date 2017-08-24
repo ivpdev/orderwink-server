@@ -1,4 +1,3 @@
-
 enum Trait {
     lowCalories,
     drinks,
@@ -8,20 +7,23 @@ enum Trait {
     vegetarian,
     kids,
     halal,
-    kosher
-    lactose-free
+    kosher,
+    lactose_free
 }
 
 class Per100g {
-    calories: integer
-    fat: integer
-    protein: integer
-    carbohydrates: integer
+    calories: number
+    fat: number
+    protein: number
+    carbohydrates: number
 }
 
 class Item {
     name: string
     category: string
-    traits: Set<Trait>
+    traits: Array<Trait>
+    ingredients: Array<String>
     per100g: Per100g
 }
+
+export { Trait, Per100g, Item }

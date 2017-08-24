@@ -15,6 +15,10 @@ waiter[id, name]
     1:n route
 
 
-
-
+search algorithm:
+1. extract criteria
+2. search menu by criteria
+3. if no direct match => try to extend dishes information from internet
+4. if still no match => offer dishes which meet only some of criteria
+(maybe swap 3 and 4)
 

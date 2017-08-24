@@ -1,0 +1,49 @@
+---
+cafes:
+- id: 1
+  name: Test Cafe 33
+  menu:
+  - category: drinks
+    items:
+    - name: Cola
+      price: 2.5
+    - name: Beer
+      price: 30
+  points:
+  - id: 11
+  - id: 12
+
+- id: 2
+  name: Mr. Kebap
+  menu:
+  - category: Kebap
+    items:
+    - name: Doner
+      price: 3
+    - name: Durum
+      price: 4
+  - category: Pizza
+    items:
+    - name: Pizza Panna
+      description: mit Salami
+      price: 5.99
+    - name: Pizza Hawaii
+      description: mit Schinken und Ananas
+      price: 6.99
+    - name: Pizza Arizona
+      description: mit Thunfisch und Zwiebeln
+      price: 6.99
+    - name: Pizza Rodeo
+      description: mit Zwiebeln, Bratkartoffeln, Speck und Ei
+      price: 7.49
+    - name: Pizza Michigan
+      description: mit Serranoschinken, Rucola und Parmesan
+      price: 7.49
+    - name: Pizza Iowa
+      description: mit Tomaten, Mozzarella und Basilikum
+      price: 7.49
+
+
+  points:
+  - id: 21
+  - id: 22
