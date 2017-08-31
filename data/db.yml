@@ -8,7 +8,7 @@ cafes:
     - name: Cola
       price: 2.5
     - name: Beer
-      price: 30
+      price: 3.0
   points:
   - id: 11
   - id: 12
@@ -19,13 +19,23 @@ cafes:
   - category: Kebap
     items:
     - name: Doner
-      price: 3
+      traits:
+      - halal
+      price: 3.5
     - name: Durum
+      traits:
+      - halal
+      - cheap
       price: 4
   - category: Pizza
     items:
     - name: Pizza Panna
       description: mit Salami
+      calories: 300
+      ingredients:
+      - fat: 10
+        carbohydrates: 15
+        protein: 10
       price: 5.99
     - name: Pizza Hawaii
       description: mit Schinken und Ananas

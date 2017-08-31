@@ -1,24 +1,27 @@
-var fs = require("fs");
+const fs = require("fs")
+const YAML = require('yamljs')
 
-function readJsonFileSync(filepath, encoding){
-    if (typeof (encoding) == 'undefined'){
-        encoding = 'utf8';
-    }
-    var file = fs.readFileSync(filepath, encoding);
-    return JSON.parse(file);
+function readFile
+(filepath, encoding){
+    if (typeof (encoding) == 'undefined') {
+        encoding = 'utf8' }
+
+    return fs.readFileSync(filepath, encoding);
 }
 
-function readJson(file){
-    var filepath = __dirname + '/../../data/' + file;
-    return readJsonFileSync(filepath);
+function readJson(file) {
+    const filepath = __dirname + '/../../data/' + file
+    return JSON.parse(readFile(filepath)) }
+
+function readYaml(file) {
+    const filepath = __dirname + '/../../data/' + file
+    return YAML.parse(readFile(filepath))
 }
 
-var json = readJson('db.json');
+const json = readJson('db.json')
+const yaml = readYaml('db.yml')
 
-var cafesFromFile = function() {
-    return new Promise(function(resolve, reject) {
-        return resolve(json.cafes)
-     })
-}
+function cafesFromFile() {
+    return new Promise((resolve, reject) => resolve(yaml.cafes))}
 
 module.exports = cafesFromFile

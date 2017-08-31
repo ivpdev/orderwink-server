@@ -7,10 +7,9 @@ const MenuService = {
         const cafesP = fromFile();
         return Promise
                   .filter(cafesP,
-                          cafe => _.find(cafe.points,
-                                         point => point.id === pointId))},
+                          cafe => _.find(cafe.points, point => String(point.id) === pointId) )},
 
-    getMenuForPointId: (pointId) => {
+    getMenuForPointId: function(pointId) {
         const cafeP = this.getCafeP(pointId)
         return Promise
                  .map(cafeP, (cafe) => cafe.menu)
