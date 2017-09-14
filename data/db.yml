@@ -51,6 +51,8 @@ cafes:
       price: 7.49
     - name: Pizza Iowa
       description: mit Tomaten, Mozzarella und Basilikum
+      traits:
+      - halal
       price: 7.49
 
 
